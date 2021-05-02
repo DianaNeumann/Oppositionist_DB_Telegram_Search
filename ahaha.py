@@ -11,7 +11,6 @@ f = open('navalny.txt').readlines()
 
 @bot.message_handler(content_types=['text', 'document', 'audio'])
 def send_welcome(message):
-
     if message.text == "/start":
         f_input = bot.send_message(message.from_user.id, "Введите почту: ")
 
@@ -20,7 +19,6 @@ def send_welcome(message):
 
         bot.send_message(message.from_user.id,"Привет! Тут ты можешь узнать, есть ли твоя почта в базе free.navalny.ru! \n\nЧтобы начать, напиши /start .")
     
-
 def find_str(message):
     if message.text != ' ' or '':
         for i in f:
